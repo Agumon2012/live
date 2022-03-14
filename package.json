@@ -1,0 +1,23 @@
+{
+  "name": "live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./stream/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agumon2012/live.git"
+  },
+  "author": "agumon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Agumon2012/live/issues"
+  },
+  "homepage": "https://github.com/Agumon2012/live#readme",
+  "dependencies": {
+    "m3u8stream": "^0.8.6",
+    "node-media-server": "^2.3.8"
+  }
+}
