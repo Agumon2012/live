@@ -42,11 +42,14 @@ function checkStream() {
         // fully parsed m3u file
         const tsName = m3u.toString().split('\n').slice(-2)[0];
         (async () => {
-            // await client.connect();
+            // get the last segment name
             const lastTs = await client.get('currentTs');
+            // if the segment didn't update
             if (lastTs == tsName) {
+                // set a counter to record the time of the current segment
                 const counts = await client.get('counts');
                 await client.set('counts', counts ? parseInt(counts) + 1: 1);
+                // if the segment didn't update after 3 period, set the live status to `stop`
                 if (counts && counts > 3) {
                     await client.set('status', 'stop');
                 }
@@ -57,7 +60,6 @@ function checkStream() {
             }
         })();
     });
-
 }
 
 const asyncFunc = setInterval(() => {
