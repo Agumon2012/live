@@ -2,7 +2,7 @@
   "name": "live",
   "version": "1.0.0",
   "description": "",
-  "main": "./stream/server.js",
+  "main": "./live.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
   "dependencies": {
     "m3u8": "^0.0.10",
     "m3u8stream": "^0.8.6",
-    "node-media-server": "^2.3.8"
+    "node-media-server": "^2.3.8",
+    "redis": "^4.0.4"
   }
 }
